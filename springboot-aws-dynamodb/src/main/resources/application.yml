@@ -1,0 +1,13 @@
+amazon:
+  access:
+    key: AKIAQHIVV6ICJXVDUVHK
+    secret-key: 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
+  region: us-east-2
+  end-point:
+    url: dynamodb.us-east-2.amazonaws.com
+server:
+  port: 9001
+spring:
+  application:
+    name: awgp-dynamodb-service
+

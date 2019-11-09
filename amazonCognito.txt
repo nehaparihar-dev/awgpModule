@@ -1,0 +1,32 @@
+AKIAQHIVV6ICL6VH6NDQ
+
+
+																																																																																																																																																			ZEwxDScZn6aCmI8udS4MGBU+v94FCn0Zfu89sVaq
+
+https://015614734852.signin.aws.amazon.com/console
+
+
+b5533e28-e43a-4aee-96f3-14b6965d9f54
+
+b5533e28-e43a-4aee-96f3-14b6965d9f54
+
+{
+ "firstName":"Neha",
+ "lastName":"Parihar",
+ "age":"25",
+ "address":{
+   "addressLine1":"abc",
+   "addressLine2":"efg",
+   "state":"uttarpradesh",
+   "city":"Kanpur",
+   "zipcode":"209217"
+ }
+}
+
+https://www.youtube.com/watch?v=EaDMG4amEfk
+
+https://github.com/SimpleProgramming/spring-boot-aws-dynamoDB
+
+3level security
+https://www.youtube.com/watch?v=viGgUx_qw6k
+ 
