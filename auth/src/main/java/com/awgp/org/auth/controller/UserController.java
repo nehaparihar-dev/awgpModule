@@ -3,6 +3,7 @@ package com.awgp.org.auth.controller;
 import com.awgp.org.auth.cognito.CognitoHelper;
 import com.awgp.org.auth.pojo.BaseResponse;
 import com.awgp.org.auth.pojo.UserDetails;
+import com.awgp.org.auth.proxy.DyanamoDBProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class UserController{
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    DyanamoDBProxy dbProxy;
+
     private static final Logger LOGGER= LoggerFactory.getLogger(UserController.class);
 
 @PostMapping("/createUser")
@@ -28,7 +32,9 @@ public boolean createUser(@RequestBody UserDetails usr){
     LOGGER.info("Name" +usr.getName()+"Password :"+usr.getPassword()+"Email :"+usr.getEmail()+"Phone No :"+usr.getPhoneNumber());
     boolean success=helper.signUpUser(usr.getName(),usr.getPassword(),usr.getEmail(),usr.getPhoneNumber());
     LOGGER.info("End Calling Sign user");
-    restTemplate.postForObject("http://awgp-dynamodb-service/userDb/createUser",usr, BaseResponse.class);
+    //restTemplate.postForObject("http://awgp-dynamodb-service/userDb/createUser",usr, BaseResponse.class);
+//Using the feign for the Db service call
+    dbProxy.createUser(usr);
     LOGGER.info("End Calling DynamoDb user");
 
     return success;
